@@ -68,4 +68,7 @@ Route::get('/method', function (Request $request) {
 Route::get('view-request', 'FormController@show');
 Route::post('post', 'FormController@post');
 
+Route::get('avatar', 'FormController@avatar');
+Route::post('upload', 'FormController@process_avartar')->name('upload');
+
 // Route::get('posts', [PostController::class, 'index']);

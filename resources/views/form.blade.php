@@ -7,20 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/post" method="post">
+    {{-- <form action="/post" method="POST">
         @csrf
+
         <p>Username</p>
         <div>
-            <input type="text" name="username">
+            <input type="text" name="username" value="{{ old('username') }}">
         </div>
+
         <p>Password</p>
         <div>
-            <input type="password" name="password">
+            <input type="password" name="password"  value="{{ old('password') }}">
         </div>
+
         <br>
+
         <div>
             <button type="submit">Login</button>
         </div>
-    </form>
+    </form> --}}
+
+    @inject('cookie', 'Illuminate\Support\Facades\Cookie')
+
+<p>Hello, {{ $cookie->get('name') }}</p>
+
+<form action="/post" method="POST">
+    @csrf
+
+    <div>
+        <button type="submit">Set cookie</button>
+    </div>
+</form>
 </body>
 </html>
