@@ -10,10 +10,10 @@ class FormController extends Controller
     {
         return view('form');
     }
-    
+
     public function post(Request $request )
     {
-        echo "ok";
+       dd($request->all());
     }
 
 }

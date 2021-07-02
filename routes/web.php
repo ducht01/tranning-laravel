@@ -65,6 +65,7 @@ Route::get('/method', function (Request $request) {
     }
 });
 
-use App\Http\Controllers\FormController;
-Route::get('/view-request', 'FormController@show');
-Route::get('post', 'FormController@post');
+Route::get('view-request', 'FormController@show');
+Route::post('post', 'FormController@post');
+
+// Route::get('posts', [PostController::class, 'index']);
