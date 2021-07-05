@@ -79,3 +79,6 @@ Route::resources([
     'posts'=> 'PostController',
     'photos' => 'PhotoController'
 ]);
+Route::get('/download', function() {
+    return response()->download('../resources/views/welcome.blade.php', 'other_name.php');
+    });
