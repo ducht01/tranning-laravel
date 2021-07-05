@@ -72,3 +72,10 @@ Route::get('avatar', 'FormController@avatar');
 Route::post('upload', 'FormController@process_avartar')->name('upload');
 
 // Route::get('posts', [PostController::class, 'index']);
+
+// controller
+Route::get('/dashboard', 'ShowDashboard');
+Route::resources([
+    'posts'=> 'PostController',
+    'photos' => 'PhotoController'
+]);
