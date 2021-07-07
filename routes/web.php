@@ -79,3 +79,8 @@ Route::resources([
     'posts'=> 'PostController',
     'photos' => 'PhotoController'
 ]);
+
+//localization
+
+Route::get('change-language/{language}', 'HomeController@changeLanguage')->name('change-language')->middleware('localization');
+
