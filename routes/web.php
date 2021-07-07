@@ -79,3 +79,8 @@ Route::resources([
     'posts'=> 'PostController',
     'photos' => 'PhotoController'
 ]);
+
+// blade
+Route::get('child', function () {
+    return view('child');
+});
