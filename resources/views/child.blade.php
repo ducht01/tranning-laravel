@@ -7,16 +7,17 @@
         <li>demo 2</li>
     </ul>
 @endsection
-@foreach ( as )
 
-@endforeach
 @section('content')
     <h1>my content</h1>
 
     @component('components.modal')
+
         @slot('bug')
             lỗi
         @endslot
+
         bugs ne
     @endcomponent
+
 @endsection
